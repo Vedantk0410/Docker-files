@@ -40,39 +40,7 @@ Set WorkingDirectory: Define the working directory inside the container.
 docker build -t toofan-core .
 
 ## Setting Up the Flask Bot Service
-## Step 1: Create the Dockerfile
 
-1) Base Image: Use the official Golang image from Docker Hub.
-
-2) Specify the base image as golang:1.21-alpine.
-Set WorkingDirectory: Define the working directory inside the container.
-
-3) Set the working directory to /app.Copy Dependency Files: Copy go.mod and go.sum files to the container.Copy these files to the working directory.Download Dependencies: Use go mod download to install dependencies.
-
-4) Run the command to download the necessary Go modules.Copy Application Code: Copy the application code from the app directory.
-
-5) Copy the rest of the application code to the container.Build the Application: Build the Go application and name the output binary main.
-
-6) Use the go build command to compile the application.Expose Port: Expose port 8003 to allow external access.
-
-7) Specify the port that the application will use.Run Command: Define the command to run the application.Set the command to run the compiled binary.
-
-## Step 1: Create the Dockerfile
-
-1) Base Image: Use the official Golang image from Docker Hub.
-
-2) Specify the base image as golang:1.21-alpine.
-Set WorkingDirectory: Define the working directory inside the container.
-
-3) Set the working directory to /app.Copy Dependency Files: Copy go.mod and go.sum files to the container.Copy these files to the working directory.Download Dependencies: Use go mod download to install dependencies.
-
-4) Run the command to download the necessary Go modules.Copy Application Code: Copy the application code from the app directory.
-
-5) Copy the rest of the application code to the container.Build the Application: Build the Go application and name the output binary main.
-
-6) Use the go build command to compile the application.Expose Port: Expose port 8003 to allow external access.
-
-7) Specify the port that the application will use.Run Command: Define the command to run the application.Set the command to run the compiled binary.
 
 ## Step 1: Create the Dockerfile for flask
 1) Base Image: Use the official Python image from Docker Hub.

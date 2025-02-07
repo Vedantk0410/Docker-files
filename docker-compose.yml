@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+  toofan-core:
+    build:
+      context: ./toofan
+      dockerfile: Dockerfile
+    container_name: toofan-core
+    ports:
+      - "8003:8003"
+    networks:
+      - toofan-network
+
+  toofan-bot-service:
+    build:
+      context: ./toofan-bot-service
+      dockerfile: Dockerfile
+    container_name: toofan-bot-service
+    ports:
+      - "5003:5003"
+    networks:
+      - toofan-network
+
+networks:
+  toofan-network:
+    driver: bridge
